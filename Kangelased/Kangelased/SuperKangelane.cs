@@ -11,7 +11,7 @@ namespace Kangelased
         private double _Osavus;
         public SuperKangelane(String Nimi, String Asukoht):base(Nimi, Asukoht)
         {
-            _Osavus = SingleRandom.Instance.Next(1, 60)/10.0;
+            _Osavus = SingleRandom.Instance.Next(1, 51)/10.0;
         }
         public override int Päästa(int ohustatud)
         {

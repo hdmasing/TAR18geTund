@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO
+using System.IO;
 
 namespace Kangelased
 {
@@ -21,7 +21,7 @@ namespace Kangelased
                     nimi_ja_koht[i] = nimi_ja_koht[i].Trim();
                 }
                 if (nimi_ja_koht[0].EndsWith("*")){
-                    kangelased.Add(new SuperKangelane(nimi_ja_koht[0], nimi_ja_koht[1]));
+                    kangelased.Add(new SuperKangelane(nimi_ja_koht[0].Trim('*'), nimi_ja_koht[1]));
                 }
                 else { kangelased.Add(new Kangelane(nimi_ja_koht[0], nimi_ja_koht[1]));
                 }
@@ -29,6 +29,14 @@ namespace Kangelased
         }
         static void Main(string[] args)
         {
+            Loefailist("kangelased.txt");
+            foreach(Kangelane hero in kangelased)
+            {
+                Console.WriteLine(hero);
+            int arv = 100;
+            Console.WriteLine(hero);
+                Console.WriteLine($"Päästa tuleb {arv} inimest.\nPäästa suudeti{Kangelane.Päästa(arv)}.\n----------------");
+            }
             
         }
     }
