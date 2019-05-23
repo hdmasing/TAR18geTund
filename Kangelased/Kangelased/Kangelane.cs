@@ -8,6 +8,12 @@ namespace Kangelased
 {
     public class Kangelane
     {
-        public Kangelane() { }
+        public string Nimi { get; set; }
+        public string Asukoht { get; set; }
+        public Kangelane( string nimi; string asukoht)
+        {
+            Nimi = nimi;
+
+        }
     }
 }
