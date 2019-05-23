@@ -23,11 +23,11 @@ namespace Kangelased
         public string Nimi1 { get => Nimi; set => Nimi = value; }
         public string Asukoht1 { get => Asukoht; set => Asukoht = value; }
 
-        public int Päästa(int ohus)
+        public virtual int Päästa(int ohus)
         {
             
 
-            return (int)Math.Round(ohus * 0, 95, 0);
+            return (int)Math.Round(ohus * 0.95, 0);
         }
 
         public override string ToString()

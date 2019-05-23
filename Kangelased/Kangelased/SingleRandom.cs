@@ -11,7 +11,7 @@ namespace Kangelased
         static SingleRandom _Instance;
         public static SingleRandom Instance
         {
-            get;{
+            get{
                 if(_Instance==null)
                 {
                     _Instance = new SingleRandom();
