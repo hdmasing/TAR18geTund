@@ -8,12 +8,31 @@ namespace Kangelased
 {
     public class Kangelane
     {
-        public string Nimi { get; set; }
-        public string Asukoht { get; set; }
-        public Kangelane( string nimi; string asukoht)
-        {
-            Nimi = nimi;
+        private string Nimi;
+        private string Asukoht;
 
+
+
+        public Kangelane( string nimi, string asukoht)
+        {
+            Nimi1 = nimi;
+            Asukoht1 = asukoht;
+
+        }
+
+        public string Nimi1 { get => Nimi; set => Nimi = value; }
+        public string Asukoht1 { get => Asukoht; set => Asukoht = value; }
+
+        public int Päästa(int ohus)
+        {
+            
+
+            return (int)Math.Round(ohus * 0, 95, 0);
+        }
+
+        public override string ToString()
+        {
+            return Nimi1 + " Kaitseb " + Asukoht1;
         }
     }
 }
